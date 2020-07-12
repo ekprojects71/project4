@@ -1,0 +1,230 @@
+.my-account {
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 25px 0;
+    font-family: Century-Gothic, Arial, sans-serif;
+}
+
+.my-account .container {
+    width: 75%;
+    max-width: 75%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* hide content*/
+.my-account .hidden {
+    display: none;
+}
+
+/* page header */
+.my-account .myaccount-header {
+    text-align: center;
+    border-bottom: 0.2px solid #e2e2e2;
+    margin-bottom: 40px;
+}
+.my-account .myaccount-header a {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.my-account .myaccount-header img {
+    max-height: 2.25em;
+}
+.my-account .myaccount-header p {
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    font-size: 0.9em;
+}
+
+/* Logout Button */
+.my-account .logout {
+    text-align: right;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.my-account .logout button {
+    padding: 5px 30px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    border-radius: 0;
+    color: white;
+    background: #1f1f1f;
+    cursor: pointer;
+}
+.my-account .logout button:hover {
+    background: #444444;
+}
+
+/* CMS Link */
+.my-account .cms-access {
+    width: 100%;
+    padding: 10px;
+    border: 0.2px solid #e2e2e2;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.my-account .cms-access a {
+    text-transform: uppercase;
+    color: black;
+}
+
+/* Personal Info */
+.my-account .user-info {
+    width: 100%;
+    padding: 10px;
+    border: 0.2px solid #e2e2e2;
+    margin-bottom: 20px;
+}
+
+
+/* Orders Total */
+.my-account .orders-total {
+    width: 100%;
+    padding: 10px;
+    border: 0.2px solid #e2e2e2;
+    margin-bottom: 20px;
+}
+
+
+/* User Dashboard */
+.my-account .user-dash {
+    padding: 5px;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 70%;
+}
+
+
+/* orders section */
+.my-account .orders {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Order List Toggle Buttons */
+.my-account .order-toggle {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    align-items: center;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    border-radius: 0;
+    background: #fafafa;
+    padding: 10px;
+}
+.my-account .order-toggle .details {
+    flex-basis: 90%;
+    text-align: left;
+}
+.my-account .order-toggle .expand-icon {
+    flex-basis: 10%;
+    max-height: 20px;
+}
+.my-account .order-toggle.expanded {
+    margin-bottom: 30px;
+}
+.my-account .order-toggle.expanded .expand-icon {
+    transform: rotate(180deg);
+}
+
+/* Shipping info section */
+.my-account .shipping-info {
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+/* Order total section */
+.my-account .order-total {
+    padding-bottom: 20px;
+    border-bottom: 0.2px solid #f7f7f7;
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+/* Orders list */
+.my-account .orders-list {
+    width: 100%;
+    list-style-type: none;
+}
+.my-account .orders-list .order-details {
+    margin-bottom: 10px;
+    border: 0.2px solid #e2e2e2;
+}
+.my-account .order-list {
+    list-style-type: none;
+}
+.my-account .product {
+    overflow: hidden;
+    width: 100%;
+}
+.my-account .product {
+    border-bottom: 0.2px solid #e2e2e2;
+    list-style-type: none;
+    padding: 10px;
+}
+
+.my-account .product:last-child {
+    border-bottom: none;
+}
+.my-account .product:hover {
+    background: #fafafa;
+}
+
+.my-account .product-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.my-account .sm-screen-left {
+    flex-basis: 10%;
+}
+.my-account .sm-screen-left .img {
+    overflow: hidden;
+    margin-right: 30px;
+    width: 100%;
+}
+.my-account .sm-screen-left .img img {
+    width: 90%;
+}
+.my-account .sm-screen-right {
+    flex-basis: 90%;
+}
+
+
+/* No orders */
+.my-account .no-orders {
+    font-style: italic;
+    text-align: center;
+    padding: 100px 0;
+    width: 100%;
+    background: rgb(247, 247, 247);
+}
+
+
+/* media queries */
+@media (max-width: 1280px) {
+    .my-account .container {
+        width: 95%;
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .my-account .user-dash {
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .my-account .myaccount-header img {
+        max-height: 1.75em;
+    }
+}

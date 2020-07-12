@@ -1,0 +1,25 @@
+.admin-links {
+    margin: 10px auto;
+    width: fit-content;
+}
+.admin-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+.admin-links ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.admin-links ul li:last-child {
+    margin-right: 0;
+}
+.admin-links ul a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #646464;
+}
+.admin-links ul a:hover {
+    color: black;
+}

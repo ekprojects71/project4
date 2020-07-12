@@ -1,0 +1,217 @@
+.edit-product-modal {
+    width: 100%;
+    padding: 33px;
+    min-height: 100vh;
+    background: white;
+    font-family: "Century Gothic Std", Arial, sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 6;
+}
+.edit-product-modal .container {
+    width: 98%;
+    margin: 0 auto;
+}
+
+.edit-product-modal input::-webkit-outer-spin-button,
+.edit-product-modal input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* modal header */
+.edit-product-modal .menu-header {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    border-bottom: 0.2px solid #e0dfdf;
+    margin-bottom: 50px;
+}
+.edit-product-modal .menu-header span,
+.edit-product-modal .menu-header button {
+    display: inline-block;
+    vertical-align: middle;
+}
+.edit-product-modal .menu-header-title {
+    display: flex;
+    flex-basis: 90%;
+}
+.edit-product-modal .menu-header-close {
+    display: flex;
+    flex-basis: 10%;
+    justify-content: flex-end;
+    align-items: center;
+}
+.edit-product-modal .menu-header span {
+    text-transform: uppercase;
+    font-size: 2.3em;
+}
+.edit-product-modal .menu-header button {
+    border: 0;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    outline: none;
+}
+.edit-product-modal .menu-header button img {
+    max-height: 1.5em;
+}
+
+/* main content container */
+.edit-product-modal .main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* form */
+.edit-product-modal form {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    flex-basis: 50%;
+    margin-right: 30px;
+}
+
+.edit-product-modal form h3 {
+    font-size: 2em;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.edit-product-modal form input,
+.edit-product-modal form textarea {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 8px;
+    border: 0.2px solid #c7c7c7;
+    font-weight: 100;
+    font-family: "Century Gothic Std", Arial, sans-serif;
+}
+.edit-product-modal form input {
+    margin-bottom: 5px;
+}
+.edit-product-modal form textarea {
+    resize: none;
+    min-height: 1vh;
+    max-height: fit-content;
+}
+
+.edit-product-modal .product-name,
+.edit-product-modal .product-description,
+.edit-product-modal .product-details,
+.edit-product-modal .product-price,
+.edit-product-modal .product-gender,
+.edit-product-modal .product-category,
+.edit-product-modal .product-sizes,
+.edit-product-modal .product-images {
+    margin-bottom: 30px;
+}
+
+.edit-product-modal input[type="number"] {
+    -moz-appearance: textfield;
+    width: 40%;
+}
+
+
+.edit-product-modal .radio-group {
+    margin-bottom: 12px;
+}
+.edit-product-modal .radio-group input {
+    width: fit-content;
+    margin-right: 5px;
+}
+.edit-product-modal input[type="file"] {
+    border: 0.2px solid #c7c7c7;
+    padding-top: 15px;
+    padding-bottom: 60px;
+    display: block;
+}
+
+.edit-product-modal .char-limit-msg {
+    display: block;
+    font-size: 0.8em;
+    margin-bottom: 20px;
+}
+
+.edit-product-modal input[type="submit"] {
+    width: fit-content;
+    padding: 10px 16px;
+    outline: none;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.edit-product-modal .categories {
+    width: 30%;
+    padding: 6px;
+}
+
+/* product images preview container */
+.edit-product-modal .img-preview {
+    flex-basis: 50%;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+.edit-product-modal .img-preview img {
+    display: block;
+    margin: 8px 0;
+    max-width: 90%;
+}
+
+/* Error Messages */
+.edit-product-modal .error-messages {
+    width: fit-content;
+    overflow: hidden;
+    max-width: 50%;
+    padding: 20px;
+    border: 0.2px solid #c7c7c7;
+    background: #f7f5f5;
+}
+.edit-product-modal .error-messages ul {
+    margin-left: 5px;
+    list-style-type: none;
+    line-height: 25px;
+}
+.edit-product-modal .error-messages ul li {
+    font-size: 0.9em;
+    color: black;
+    text-shadow: 0.2px 0.2px black;
+    text-transform: uppercase;
+}
+
+
+/* Delete images section */
+.edit-product-modal .delete-images {
+    width: 80%;
+    overflow: hidden;
+}
+.edit-product-modal .hidden {
+    display: none;
+}
+
+.edit-product-modal .delete-img-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+}
+.edit-product-modal .delete-img-grid img {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+.edit-product-modal .marked {
+    opacity: 0.2;
+    filter: grayscale(1.0);
+}

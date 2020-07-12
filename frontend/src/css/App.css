@@ -1,0 +1,29 @@
+/* Fonts */
+/* font-family: 'Cinzel', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+/* font-family: 'Cormorant Infant', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+/* Global Rulesets, Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::selection {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+.app {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}

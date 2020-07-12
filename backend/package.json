@@ -1,0 +1,23 @@
+{
+  "name": "clothing-store",
+  "version": "1.0.0",
+  "description": "A fullstack project using a PERN stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "EK",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "bcrypt": "^5.0.0",
+    "connect-pg-simple": "^6.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "multer": "^1.4.2",
+    "pg": "^8.2.1",
+    "sharp": "^0.25.4"
+  }
+}

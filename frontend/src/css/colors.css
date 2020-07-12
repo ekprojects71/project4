@@ -1,0 +1,44 @@
+/* This stylesheet contains the color palette for the site. Each color can be applied to various containers */
+/* font colors are preceded by font- in their naming */
+
+/* bg colors */
+.white {
+    background: #fdfdfd;
+}
+
+.pure-white {
+    background: white;
+}
+
+.light-gray {
+    background: #f0f0f0;
+}
+
+.gray {
+    background: #adabab;
+}
+
+.black {
+    background: #000000;
+}
+
+.burgundy {
+    background: #7a5963;
+}
+
+/* font colors */
+.font-white {
+    color: #fdfafa;
+}
+
+.font-dark {
+    color: #0e0d0d;
+}
+
+.font-gray {
+    color: #a7a4a4;
+}
+
+.font-dark-gray {
+    color: #686666;
+}

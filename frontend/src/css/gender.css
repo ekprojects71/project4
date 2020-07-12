@@ -1,0 +1,138 @@
+.gender-page {
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 25px 0;
+}
+
+.gender-page .container {
+    width: 75%;
+    max-width: 75%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.gender-page .banner {
+    width: 100%;
+    position: relative;
+    margin-bottom: 25px;
+}
+.gender-page .banner-img {
+    width: 100%;
+    height: 12vw;
+    background: black;
+    z-index: 0;
+}
+.gender-page .banner-img img {
+    width: 100%;
+    height: 12vw;
+    opacity: 0.7;
+    object-fit: cover;
+    object-position: center;
+}
+.gender-page .banner h1 {
+    font-family: 'Cormorant Infant', serif;
+    text-align: center;
+    color: white;
+    font-weight: 200;
+    font-size: 5.2vw;
+    padding: 0;
+    text-shadow: 2px 1px 2px black;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gender-page .featured {
+    width: 100%;
+    position: relative;
+    margin-bottom: 25px;
+    background: black;
+}
+.gender-page .featured .featured-img {
+    width: 100%;
+    max-height: 35vw;
+}
+.gender-page .featured .featured-img img {
+    width: 100%;
+    height: 35vw;
+    object-fit: cover;
+    object-position: top center;
+}
+.gender-page .featured:hover .featured-img img {
+    opacity: 0.6;
+}
+.gender-page .featured h1 {
+    font-family: 'Cormorant Infant', serif;
+    text-align: center;
+    color: white;
+    font-weight: 200;
+    font-size: 3.2vw;
+    padding: 0;
+    text-shadow: 2px 1px 2px black;
+    position: absolute;
+    z-index: 1;
+    left: 10%;
+    top: 90%;
+    transform: translate(-10%, -90%);
+}
+
+.gender-page .popular-items {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.gender-page .popular-items .item {
+    max-width: 50%;
+    overflow: hidden;
+    position: relative;
+    background: black;
+    height: 62vw;
+    margin: 20px 0;
+}
+.gender-page .popular-items .item:first-child {
+    margin-right: 12.5px;
+}
+.gender-page .popular-items .item:last-child {
+    margin-left: 12.5px;
+}
+.gender-page .popular-items .item img {
+    width: 100%;
+    height: 62vw;
+    object-fit: cover;
+    object-position: top center;
+}
+.gender-page .popular-items .item:hover img {
+    opacity: 0.6;
+}
+.gender-page .popular-items h1 {
+    font-family: 'Cormorant Infant', serif;
+    text-align: center;
+    color: white;
+    font-weight: 200;
+    font-size: 3.2vw;
+    padding: 0;
+    text-shadow: 2px 1px 2px black;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Media Queries */
+@media (max-width: 1000px) {
+    .gender-page .container {
+        width: 90%;
+        max-width: 90%;
+    }
+} 
+@media (max-width: 768px) {
+    .gender-page .container {
+        width: 95%;
+        max-width: 95%;
+    }
+} 

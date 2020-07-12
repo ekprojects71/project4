@@ -1,0 +1,197 @@
+.add-product-modal {
+    width: 100%;
+    padding: 33px;
+    min-height: 100vh;
+    background: white;
+    font-family: "Century Gothic Std", Arial, sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 6;
+}
+.add-product-modal .container {
+    width: 98%;
+    margin: 0 auto;
+}
+
+.add-product-modal input::-webkit-outer-spin-button,
+.add-product-modal input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* modal header */
+.add-product-modal .menu-header {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    border-bottom: 0.2px solid #e0dfdf;
+    margin-bottom: 50px;
+}
+.add-product-modal .menu-header span,
+.add-product-modal .menu-header button {
+    display: inline-block;
+    vertical-align: middle;
+}
+.add-product-modal .menu-header-title {
+    display: flex;
+    flex-basis: 90%;
+}
+.add-product-modal .menu-header-close {
+    display: flex;
+    flex-basis: 10%;
+    justify-content: flex-end;
+    align-items: center;
+}
+.add-product-modal .menu-header span {
+    text-transform: uppercase;
+    font-size: 2.3em;
+}
+.add-product-modal .menu-header button {
+    border: 0;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    outline: none;
+}
+.add-product-modal .menu-header button img {
+    max-height: 1.5em;
+}
+
+/* main content container */
+.add-product-modal .main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* form */
+.add-product-modal form {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    flex-basis: 50%;
+    margin-right: 30px;
+}
+
+.add-product-modal form h3 {
+    font-size: 2em;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.add-product-modal form input,
+.add-product-modal form textarea {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 8px;
+    border: 0.2px solid #c7c7c7;
+    font-weight: 100;
+    font-family: "Century Gothic Std", Arial, sans-serif;
+}
+.add-product-modal form input {
+    margin-bottom: 5px;
+}
+.add-product-modal form textarea {
+    resize: none;
+    min-height: 1vh;
+    max-height: fit-content;
+}
+
+.add-product-modal .product-name,
+.add-product-modal .product-description,
+.add-product-modal .product-details,
+.add-product-modal .product-price,
+.add-product-modal .product-gender,
+.add-product-modal .product-category,
+.add-product-modal .product-sizes,
+.add-product-modal .product-images {
+    margin-bottom: 30px;
+}
+
+.add-product-modal input[type="number"] {
+    -moz-appearance: textfield;
+    width: 40%;
+}
+
+
+.add-product-modal .radio-group {
+    margin-bottom: 12px;
+}
+.add-product-modal .radio-group input {
+    width: fit-content;
+    margin-right: 5px;
+}
+.add-product-modal input[type="file"] {
+    border: 0.2px solid #c7c7c7;
+    padding-top: 15px;
+    padding-bottom: 60px;
+    display: block;
+}
+
+.add-product-modal .char-limit-msg {
+    display: block;
+    font-size: 0.8em;
+    margin-bottom: 20px;
+}
+
+.add-product-modal input[type="submit"] {
+    width: fit-content;
+    padding: 10px 16px;
+    outline: none;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.add-product-modal .categories {
+    width: 30%;
+    padding: 6px;
+}
+
+/* product images preview container */
+.add-product-modal .img-preview {
+    flex-basis: 50%;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+.add-product-modal .img-preview img {
+    display: block;
+    margin: 8px 0;
+    max-width: 90%;
+}
+
+/* Error Messages */
+.add-product-modal .error-messages {
+    width: fit-content;
+    overflow: hidden;
+    max-width: 50%;
+    padding: 20px;
+    border: 0.2px solid #c7c7c7;
+    background: #f7f5f5;
+}
+.add-product-modal .error-messages ul {
+    margin-left: 5px;
+    list-style-type: none;
+    line-height: 25px;
+}
+.add-product-modal .error-messages ul li {
+    font-size: 0.9em;
+    color: black;
+    text-shadow: 0.2px 0.2px black;
+    text-transform: uppercase;
+}
+
+.add-product-modal .hidden {
+    display: none;
+}

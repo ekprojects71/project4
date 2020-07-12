@@ -1,0 +1,60 @@
+.admin-home {
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 25px 0;
+    font-family: "Century Gothic Std", Arial, sans-serif;    
+}
+
+.admin-home .container {
+    width: 75%;
+    max-width: 75%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* page header */
+.admin-home .admin-header {
+    text-align: center;
+    border-bottom: 0.2px solid #e2e2e2;
+    margin-bottom: 10px;
+}
+.admin-home .admin-header a {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.admin-home .admin-header img {
+    max-height: 2.25em;
+}
+.admin-home .admin-header p {
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    font-size: 0.9em;
+}
+
+/* Content */
+.information {
+    width: 100%;
+    margin: 0 auto;
+    border: 0.2px solid #e2e2e2;
+    padding: 20px;
+}
+.information p {
+    line-height: 2em;
+}
+.information img {
+    max-width: 60%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.information h1,
+.information h2 {
+    text-align: center;
+}
+
+.information h2 {
+    color: orange;
+    margin-bottom: 50px;
+}

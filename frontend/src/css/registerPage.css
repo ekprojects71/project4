@@ -1,0 +1,206 @@
+.register-page {
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 25px 0;
+    font-family: Century-Gothic, Arial, sans-serif;
+}
+
+.register-page .container {
+    width: 75%;
+    max-width: 75%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* page header */
+.register-page .register-header {
+    text-align: center;
+    border-bottom: 0.2px solid #e2e2e2;
+    margin-bottom: 40px;
+}
+.register-page .register-header a {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.register-page .register-header img {
+    max-height: 2.25em;
+}
+.register-page .register-header p {
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    font-size: 0.9em;
+}
+
+/*registration form */
+.register-page .registration-form {
+    border: 0.2px solid #e2e2e2;
+    padding: 80px 70px;
+    width: 70%;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.register-page .form-header {
+    margin-bottom: 60px;
+}
+.register-page .form-header h1 {
+    font-weight: 100;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.register-page .form-header a {
+    font-weight: 100;
+    font-size: 0.75rem;
+    margin-bottom: 5px;
+    color: #636363;
+}
+
+.register-page .credentials,
+.register-page .personal-info {
+    margin-bottom: 40px;
+}
+.register-page .credentials h2,
+.register-page .personal-info h2 {
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.register-page .registration-form .input-group {
+    margin-bottom: 20px;
+}
+
+.register-page .registration-form label {
+    display: block;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+.register-page .registration-form input {
+    display: block;
+    width: 50%;
+    padding: 5px;
+    font-weight: 100;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+    outline: none;
+    border-radius: 0;
+    border: 0.2px solid #e2e2e2;
+}
+.register-page .registration-form input:focus {
+    border: 0.2px solid black;
+}
+
+.register-page .registration-form .directions {
+    font-size: 0.75rem;
+    width: 50%;
+    margin-bottom: 4px;
+    color: #464646;
+}
+
+.register-page .registration-form .states-dropdown {
+    padding: 3px;
+    border-radius: none;
+    border: 0.2px solid #e2e2e2;
+    width: 20%;
+}
+.register-page .registration-form .states-dropdown:focus {
+    border: 0.2px solid black;
+}
+
+.register-page .registration-form #streetAddress {
+    width: 100%;
+}
+
+.register-page .registration-form #zipcode {
+    width: 20%;
+}
+
+.register-page .registration-form .submission {
+    display: flex;
+    flex-direction: row;
+}
+.register-page .registration-form .terms {
+    font-size: 0.65rem;
+    flex-basis: 75%;
+    text-transform: uppercase;
+    text-align: justify;
+    padding-right: 40px;
+    line-height: 1.5em;
+    color: #696969;
+}
+.register-page .registration-form .terms p {
+    margin-bottom: 15px;
+}
+.register-page .registration-form .submit-btn {
+    flex-basis: 25%;
+}
+.register-page .registration-form .submit-btn input {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+}
+.register-page .registration-form .submit-btn input:focus {
+    border: 0.2px solid #e2e2e2;
+}
+
+.register-page .messages {
+    margin: 0 auto;
+    padding: 20px;
+    list-style-type: none;
+    border: 0.2px solid #e2e2e2;
+    background: #f7f7f7;
+}
+.register-page .messages ul {
+    list-style-type: none;
+}
+
+
+
+
+/* Media queries */
+@media (max-width: 1280px) {
+    .register-page .registration-form {
+        width: 100%;
+        max-width: 100%;
+        
+    }
+}
+@media (max-width: 1000px) {
+    .register-page .container {
+        width: 90%;
+        max-width: 90%;
+    }
+    .register-page .registration-form {
+        padding: 40px 35px;
+    }
+}
+@media (max-width: 768px) {
+    .register-page .registration-form input {
+        
+        width: 100% !important;
+    }
+    .register-page .registration-form .states-dropdown {
+        width: auto;
+    }
+    .register-page .registration-form .directions {
+        width: 100%;
+    }
+}
+@media (max-width: 450px) {
+    .register-page .register-header img {
+        max-height: 1.8em;
+    }
+    .register-page .registration-form .submission {
+        flex-direction: column;
+    }
+    .register-page .registration-form .terms {
+        padding-right: 0;
+        margin-bottom: 15px;
+    }
+}

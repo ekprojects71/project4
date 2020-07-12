@@ -1,0 +1,39 @@
+.product-size-picker {
+    background: #ebebeb;
+    border: 0.2px solid #999999;
+    padding: 12px;
+    width: fit-content;
+    max-width: 600px;
+}
+
+.sizes-container {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.size-item {
+    display: inline-block;
+    background: white;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: 0.2px solid rgb(206, 206, 206);
+    box-shadow: 1px 0.3px 4px #0000001f;
+    padding-top: 15px;
+}
+.size-item:hover {
+    background: #f1f1f1;
+}
+
+.selected,
+.selected:hover {
+    background: black;
+    color: white;
+    border: 0.2px solid #f0f0f0;
+}

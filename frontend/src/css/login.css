@@ -1,0 +1,161 @@
+.login-page {
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 25px 0;
+    font-family: Century-Gothic, Arial, sans-serif;
+}
+
+.login-page .container {
+    width: 75%;
+    max-width: 75%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.login-page .login-header {
+    text-align: center;
+    border-bottom: 0.2px solid #e2e2e2;
+    margin-bottom: 20px;
+}
+.login-page .login-header a {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.login-page .login-header img {
+    max-height: 2.25em;
+}
+.login-page .login-header p {
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.login-page .login-menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.login-page .login-menu .register,
+.login-page .login-menu .login {
+    border: 0.2px solid #e2e2e2;
+    margin: 20px;
+    padding: 50px 80px;
+    flex-basis: 50%;
+}
+.login-page .login-menu .register {
+    margin-left: 0;
+}
+.login-page .login-menu .login {
+    margin-right: 0;
+}
+
+.login-page .login-menu .input-group {
+    margin-bottom: 20px;
+}
+
+.login-page .login-menu .login h1,
+.login-page .login-menu .register h1 {
+    margin-bottom: 20px;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    color: #000;
+}
+
+.login-page .login-menu .register p {
+    font-size: 0.8rem;
+    margin-bottom: 60px;
+}
+.login-page .login-menu .register-btn button {
+    outline: none;
+    border: 0.2px solid #e2e2e2;
+    text-transform: capitalize;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.login-page .login-menu .login label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.76rem;
+    margin-bottom: 5px;
+}
+
+.login-page .login-menu .login input {
+    display: block;
+    padding: 5px;
+    font-size: 0.76rem;
+    margin-bottom: 5px;
+    border-radius: 0;
+    border: 0.2px solid #e2e2e2;
+    width: 100%;
+    outline: none;
+}
+.login-page .login-menu .login input:focus {
+    border-radius: 0;
+    border: 0.2px solid #000000;
+}
+
+.login-page .login-menu .login-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.login-page .login-menu .login input[type="submit"] {
+    display: block;
+    padding: 5px 20px;
+    font-size: 0.76rem;
+    border-radius: 0;
+    border: 0.2px solid #e2e2e2;
+    outline: none;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.login-page .messages {
+    margin: 0 auto;
+    padding: 20px;
+    list-style-type: none;
+    border: 0.2px solid #e2e2e2;
+    background: #f7f7f7;
+}
+.login-page .messages ul {
+    list-style-type: none;
+}
+
+
+
+
+/* media queries */
+@media (max-width: 1200px) {
+    .login-page .login-menu {
+        flex-direction: column;
+    }
+
+    .login-page .login-menu .register,
+    .login-page .login-menu .login {
+        margin: 20px 0;
+    }
+    .login-page .login-menu .register {
+        order: 1;
+    }
+    .login-page .login-menu .login {
+        order: 0;
+    }
+
+}
+@media (max-width: 768px) {
+    .login-page .login-header img {
+        max-height: 1.5em;
+    }
+    .login-page .login-menu .register,
+    .login-page .login-menu .login {
+        padding: 25px 40px;
+    }
+    .login-page .container {
+        width: 96%;
+        max-width: 96%;
+    }
+}

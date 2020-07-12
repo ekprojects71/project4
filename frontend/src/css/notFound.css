@@ -1,0 +1,21 @@
+.not-found {
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 25px 0;
+    font-family: Century-Gothic, Arial, sans-serif;
+    min-height: 60vh;
+}
+
+.not-found .container {
+    width: 75%;
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+.not-found h1 {
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+.not-found a {
+    color: gray;
+}

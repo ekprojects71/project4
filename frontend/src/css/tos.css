@@ -1,0 +1,27 @@
+.terms-of-service {
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 25px 0;
+    font-family: Century-Gothic, Arial, sans-serif;
+    text-transform: uppercase;
+}
+.terms-of-service .container {
+    width: 75%;
+    max-width: 75%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.terms-of-service h1 {
+    margin-bottom: 30px;
+}
+.terms-of-service h2,
+.terms-of-service h3 {
+    margin-top: 30px;
+}
+.terms-of-service p, 
+.terms-of-service li {
+    line-height: 1.3em;
+    text-align: justify;
+    font-size: 0.75em;
+    color: #202020;
+}

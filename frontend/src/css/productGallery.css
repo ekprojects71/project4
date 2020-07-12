@@ -1,0 +1,118 @@
+.product-gallery {
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 25px 0;
+    font-family: "Century Gothic Std", Arial, sans-serif;
+}
+
+.product-gallery .container {
+    width: 75%;
+    max-width: 75%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.product-gallery .title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.product-gallery .title h1 {
+    font-family: 'Cormorant Infant', serif;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 2em;
+}
+
+.product-gallery .product-grid {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.product-gallery .product-item {
+    border: 0.2px solid #f7f7f7;
+}
+.product-gallery .product-item a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+.product-gallery .product-img {
+    min-height: 70vh;
+    height: 70vh;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background: black;
+}
+.product-gallery .product-img img {
+    width: 100%;
+    min-height: 70vh;
+    height: 70vh;
+    object-fit: cover;
+    object-position: top center;
+}
+.product-gallery .product-item:hover .product-img img {
+    opacity: 0.6;
+}
+.product-gallery .product-item .product-name {
+    font-size: 1.1em;
+    margin-top: 15px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.product-gallery .product-item .product-price {
+    margin-bottom: 25px;
+}
+.product-gallery .product-item:hover {
+    background: rgb(247, 247, 247);
+}
+
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .product-gallery .product-grid {
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+@media (max-width: 1000px) {
+    .product-gallery .container {
+        width: 90%;
+        max-width: 90%;
+    }
+
+    .product-gallery .product-grid {
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+@media (max-width: 768px) {
+    .product-gallery .container {
+        width: 95%;
+        max-width: 95%;
+    }
+    .product-gallery .product-img {
+        min-height: 45vh;
+        height: 45vh;
+    }
+    .product-gallery .product-img img {
+        min-height: 45vh;
+        height: 45vh;
+    }
+}
+@media (max-width: 650px) {
+    .product-gallery .product-grid {
+        max-width: 70%;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 auto;
+        display: block;
+    }
+    .product-gallery .product-item {
+        margin-bottom: 10px;
+    }
+}
