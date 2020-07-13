@@ -97,11 +97,13 @@ const checkCreds = (req, res, next) => {
 };
 
 //delete non-admins every time the server "wakes up" - since this is a herokuapp
+//cleans up any products that were added or edited
 try {
     queries.deleteUsers();
+    queries.deleteHerokuProducts();
 }
 catch {
-    console.log("Could not delete users");
+    console.log("Could not delete users or clean up products");
 }
 
 
@@ -113,6 +115,7 @@ const auth = require("./auth/index");
 app.use("/auth", auth);
 
 
+
 /*
     SERVING THE FRONT-END
 */
@@ -121,6 +124,10 @@ app.use(express.static(path.join(__dirname, "dist")));
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "dist", "index.html"));
+});
+
 
 
 //uploads

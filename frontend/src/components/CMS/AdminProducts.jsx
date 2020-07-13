@@ -104,8 +104,12 @@ const AdminProducts = (props) => {
                         <h2>Products</h2>
                         <p>
                             Note: This list only lists products that are editable. 
-                            The original catalogue is not editable for demo purposes.
+                            The original catalogue is not editable for demo purposes.<br/>
+                            <b>
+                            Also: Since heroku does not persist static files, products that you add will be deleted when the heroku dyno goes to sleep.
+                            </b>
                         </p>
+                        
                         {filtered && filtered.length > 0 ? (
                             <ul className="products-list">
                                 {filtered.map(product => {

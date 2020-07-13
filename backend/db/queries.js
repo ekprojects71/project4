@@ -394,6 +394,7 @@ const updateProduct = async (product, images) => {
                 [productID.product_id, prodSize]);    
         })
 
+        /*  - DISABLED DUE TO HEROKU (...but it does work) -
 
         //delete any images that were marked for deletion
         if(product.markedImages.length > 0) {
@@ -472,6 +473,8 @@ const updateProduct = async (product, images) => {
                 `, [productID.product_id, imageId]); 
             });    
         }
+
+        */
 
         return "successfully updated product";
     }
@@ -812,6 +815,7 @@ const registerUser = async (user) => {
 
 
 
+//HEROKU-RELATED CLEANUP QUERIES
 //CLEANUP - delete all non-admin users as well as their orders
 const deleteUsers = async () => {
     try {
@@ -851,7 +855,41 @@ const deleteUsers = async () => {
         //finally, delete all non-admin users
         const deleteUsers = await pool.query(`delete from users where isadmin = false`, []);
 
-        return null;
+        return true;
+    }
+    catch { return null; }
+};
+
+//CLEANUP -- DELETES ANY ADDED PRODUCTS EVERY TIME THE HEROKU DYNO SPINS UP
+const deleteHerokuProducts = async () => {
+    try {
+        //delete the product bridge entities
+        const deleteSizes = await pool.query(`
+        delete from product_size
+        where product_id > 73
+        `, []);
+
+        const deleteDetails = await pool.query(`
+        delete from product_details 
+        where product_id > 73
+        `, []);
+
+        const deleteProdImages = await pool.query(`
+        delete from product_image
+        where product_id > 73
+        `, []);
+
+        //clean up the image table
+        const deleteImages = await pool.query(`
+        delete from image where image_id > 193
+        `, []);
+
+        //delete product records
+        const deleteProducts = await pool.query(`
+        delete from product where product_id > 73
+        `, []);
+
+        return true;
     }
     catch { return null; }
 };
@@ -877,5 +915,6 @@ module.exports = {
     getUserInfo,
     registerUser,
     loginUser,
-    deleteUsers
+    deleteUsers,
+    deleteHerokuProducts
 }

@@ -386,9 +386,10 @@ const EditProductModal = (props) => {
 
                         <div className="goodlookinout">
                             <p><b>Please make sure the sizes, gender, and category are correct before submitting.</b></p>
+                            <p>Also, since heroku does not persist static files, I have disabled the editing & removal of images on the back-end. Thank you for understanding.</p>
                         </div>
 
-                        <input type="submit" value="Submit Product" />
+                        <input type="submit" value="Update Product" />
                     </form>
 
                     {/* Preview product images */}

@@ -33,7 +33,7 @@ class App extends Component {
 
 		return (
 			<div className="app">
-			<BrowserRouter>
+			<BrowserRouter basename="/">
 			<AuthContextProvider>
 			<ShoppingCartProvider>
 			<NavContextProvider>

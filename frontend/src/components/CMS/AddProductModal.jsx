@@ -314,6 +314,10 @@ const AddProductModal = (props) => {
                             />    
                         </div>
 
+                        <div className="goodlookinout">
+                            <p><b>Please note that since heroku does not persist static files, products you add will be deleted when the heroku dyno goes to sleep.</b></p>
+                        </div>
+
                         <input type="submit" value="Submit Product" />
                     </form>
 
