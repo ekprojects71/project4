@@ -51,7 +51,7 @@ class App extends Component {
 				<Route exact path="/fashion/:gender/:category" component={ProductGallery} />
 				<Route exact path="/fashion/:gender/:category/:subcategory" component={ProductGallery} />
 
-				<Route exact path="/products/:product_code" component={ProductPage} />
+				<Route exact path="/products/:gender/:category/:subcategory/:title" component={ProductPage} />
 
 				<Route exact path="/tos">
 					<Navbar />

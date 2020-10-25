@@ -61,10 +61,14 @@ const ProductGallery = (props) => {
                                 let imgUrl = product.imageUrl.replace("public", "").trim();
                                 let index = imgUrl.lastIndexOf(".");
                                 imgUrl = imgUrl.substring(0, index)+"_m"+imgUrl.substring(index);
+                                let productLink = `/products/${product.gender}` +
+                                        `/${product.category.trim().replace(/ /g, "_")}` +
+                                        `/${product.subcategory.trim().replace(/ /g, "_")}` +
+                                        `/${product.name.trim().replace(/ /g, "_")}`;
 
                                 return (
                                     <li className="product-item" key={product.itemId} data-id={product.itemId}>
-                                        <Link to={`/products/${product.itemId}`}>
+                                        <Link to={productLink}>
                                         <div className="product-img">
                                             <img src={imgUrl} alt={product.name} />
                                         </div>

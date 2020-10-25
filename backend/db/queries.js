@@ -136,11 +136,16 @@ const getProductsByCategory = async ( gender, category, subcategory) => {
 
             const productsQuery = await pool.query(`
             select distinct on (pi.product_id) p.product_id, p.item_id, p.product_name, 
-                p.description, p.price, p.sale_price, p.on_sale, i.image_url 
-            from product as p, product_image as pi, image as i
-            where p.product_subcategory_id = $1 and p.gender_id = $2 and
+                p.description, p.price, p.sale_price, p.on_sale, c.category_name,
+				s.subcategory_name, g.gender_name, i.image_url 
+            from product as p, product_category as c, product_subcategory as s, 
+				gender as g, product_image as pi, image as i
+            where p.gender_id = g.gender_id and
+				p.product_subcategory_id = s.product_subcategory_id and
+				s.product_category_id = c.product_category_id and
+				p.product_subcategory_id = $1 and p.gender_id = $2 and
                 pi.product_id = p.product_id and i.image_id = pi.image_id
-            order by pi.product_id, i.image_url asc   
+            order by pi.product_id, i.image_url asc    
             `, [subcatId, gender]);
             data = await productsQuery.rows;
         }
@@ -154,10 +159,12 @@ const getProductsByCategory = async ( gender, category, subcategory) => {
 
             const productsQuery = await pool.query(`
             select distinct on (pi.product_id) p.product_id, p.item_id, p.product_name, 
-                p.description, p.price, p.sale_price, p.on_sale, i.image_url 
+                p.description, p.price, p.sale_price, p.on_sale, c.category_name, 
+				s.subcategory_name, g.gender_name, i.image_url 
             from product as p, product_category as c, product_subcategory as s,
-                product_image as pi, image as i
+                product_image as pi, gender as g, image as i
             where c.product_category_id = $1 and p.gender_id = $2 and
+				p.gender_id = g.gender_id and
                 p.product_subcategory_id = s.product_subcategory_id and
                 s.product_category_id = c.product_category_id and
                 pi.product_id = p.product_id and i.image_id = pi.image_id
@@ -172,6 +179,9 @@ const getProductsByCategory = async ( gender, category, subcategory) => {
                 itemId: product.item_id,
                 name: product.product_name,
                 price: product.on_sale ? (product.sale_price) : (product.price),
+                category: product.category_name,
+                subcategory: product.subcategory_name,
+                gender: product.gender_name.toLowerCase(),
                 imageUrl: product.image_url
             });
         });
@@ -182,12 +192,20 @@ const getProductsByCategory = async ( gender, category, subcategory) => {
     catch { return null; }
 };
 
-const getProduct = async (productCode) => {
+const getProduct = async (gender, category, subcategory, title) => {
     try {
         //get product row
         const productQuery = await pool.query(`
-        select * from product where item_id = $1
-        `, [productCode]);
+        select * 
+        from product as p, gender as g, product_category as c, product_subcategory as s 
+        where p.gender_id = g.gender_id AND
+                g.gender_name = initcap($1) AND
+                s.product_category_id = c.product_category_id AND
+                c.category_name = $2 AND
+                p.product_subcategory_id = s.product_subcategory_id AND
+                s.subcategory_name = $3 AND
+                product_name = $4
+        `, [gender, category, subcategory, title]);
         const productData = await productQuery.rows[0];
 
         //get product image

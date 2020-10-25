@@ -28,8 +28,11 @@ const ProductPage = (props) => {
 
     //fetch the product
     const fetchProduct = async () => {
-        const param = props.match.params.product_code;
-        const response = await fetch(`/api/products/product/${param}`);
+        const gender = props.match.params.gender;
+        const category = props.match.params.category;
+        const subcategory = props.match.params.subcategory;
+        const title = props.match.params.title;
+        const response = await fetch(`/api/products/product/${gender}/${category}/${subcategory}/${title}`);
         const data = await response.json();
         
         if(response.status === 200) {

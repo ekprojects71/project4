@@ -98,12 +98,20 @@ router.get("/products/gallery/:category", async (req, res) => {
     }
 });
 
-router.get("/products/product/:productCode", async (req, res) => {
-    if(!req.params.productCode) {
+router.get("/products/product/:gender/:category/:subcategory/:title", async (req, res) => {
+    if(!req.params.gender ||
+        !req.params.category ||
+        !req.params.subcategory ||
+        !req.params.title) {
         return res.status(404).json({error: "Invalid request"});
     }
 
-    const data = await queries.getProduct(req.params.productCode);
+    let category = req.params.category.replace(/_/g, " ");
+    let subcategory = req.params.subcategory.replace(/_/g, " ");
+    let title = req.params.title.replace(/_/g, " ");
+
+    const data = await queries.getProduct(req.params.gender, 
+                                        category, subcategory, title);
 
     if(data) {
         res.status(200).json(data);
