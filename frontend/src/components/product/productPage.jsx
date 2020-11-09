@@ -26,6 +26,9 @@ const ProductPage = (props) => {
     //for validation
     const [ validSelection, setValidSelection ] = useState(true); 
 
+    //url for shopping cart
+    const [ url, setUrl ] = useState(``);
+
     //fetch the product
     const fetchProduct = async () => {
         const gender = props.match.params.gender;
@@ -36,7 +39,8 @@ const ProductPage = (props) => {
         const data = await response.json();
         
         if(response.status === 200) {
-            setProduct(data);    
+            setProduct(data);
+            setUrl(`/products/${gender}/${category}/${subcategory}/${title}`);    
         }
         if(response.status !== 200) {
             props.history.push("/404");
@@ -120,7 +124,7 @@ const ProductPage = (props) => {
                 price = product.price;
             }
 
-            addProduct(product.itemId, value, product.name, name, price, imgUrl);
+            addProduct(product.itemId, value, product.name, name, price, imgUrl, url);
         }
     }
 

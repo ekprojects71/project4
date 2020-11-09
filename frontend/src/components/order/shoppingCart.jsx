@@ -123,7 +123,7 @@ const ShoppingCart = (props) => {
 
                                         <div className="sm-screen-left">
                                             <div className="img">
-                                                <Link to={`/products/${product.itemId}`}>
+                                                <Link to={product.url}>
                                                     <img src={product.image} alt="thumbnail" />
                                                 </Link>
                                             </div>    

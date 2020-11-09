@@ -14,7 +14,7 @@ const ShoppingCartProvider = (props) => {
         localStorage.setItem("cart", JSON.stringify(cart));
     }
 
-    const addProduct = (itemId, sizeId, name, sizeName, price, image) => {
+    const addProduct = (itemId, sizeId, name, sizeName, price, image, url) => {
 
         let storedCart = JSON.parse(localStorage.getItem("cart"));
 
@@ -36,7 +36,8 @@ const ShoppingCartProvider = (props) => {
                 name: name,
                 sizeName: sizeName ? (sizeName) : (""),
                 price: price, 
-                image: image, 
+                image: image,
+                url: url, 
                 quantity: 1 }];
         }
 
